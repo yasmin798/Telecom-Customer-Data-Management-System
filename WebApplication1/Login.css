@@ -1,0 +1,78 @@
+﻿/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Form container styling */
+form {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px; /* Slightly rounder edges */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    width: 350px; /* Increased width for a bigger form */
+    text-align: left;
+}
+
+    /* Form heading styling */
+    form div {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #333;
+        text-align: center;
+        font-weight: bold;
+    }
+
+/* Label styling */
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600; /* Bold for clarity */
+    text-align: left;
+}
+
+/* Textbox styling */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px; /* Slightly rounder edges */
+    font-size: 16px;
+}
+
+/* Button styling */
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px; /* Slightly rounder edges */
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 15px;
+}
+
+    /* Button hover effect */
+    button:hover {
+        background-color: #0056b3;
+    }

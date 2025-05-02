@@ -1,0 +1,175 @@
+﻿
+/* General Body Styling */
+/* To ensure body takes up full viewport height */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevent scrolling on body */
+}
+
+/* Navbar Styling with Hover Effect */
+.navbar {
+    position: fixed; /* Fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    background-color: #007BFF; /* Blue background */
+    color: white;
+    padding: 15px 0;
+    font-size: 1.8rem;
+    text-align: center;
+    z-index: 10; /* Ensure navbar stays on top */
+    transition: background-color 0.3s ease;
+}
+
+/* Admin Page Layout */
+.admin-page {
+    display: flex; /* Flexbox layout for sidebar and content side by side */
+    width: 100%;
+    margin-top: 80px; /* Offset for the navbar */
+    height: calc(100vh - 80px); /* Full height minus navbar height */
+    padding: 0;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 0; /* Initially set sidebar width to 0 (hidden) */
+    background-color: #007BFF;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 20px;
+    padding-left: 10px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+    z-index: 100;
+    overflow-y: auto;
+}
+
+.sidebar-btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 15px;
+    margin: 10px 0;
+    cursor: pointer;
+    text-align: left;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    width: 90%;
+}
+
+    .sidebar-btn:hover {
+        background-color: #0056b3;
+    }
+
+/* Sidebar Hover Effect */
+.sidebar:hover {
+    width: 250px; /* Expand sidebar width when hovered */
+}
+
+/* Sidebar Blue Line */
+.sidebar-line {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 5px; /* Blue line width */
+    height: 100%;
+    background-color: #007BFF;
+    transition: all 0.3s ease;
+    z-index: 101;
+}
+
+/* Main Content Styling */
+.main-content {
+    margin-top: 80px; /* Offset for navbar height */
+    background-color: #fff;
+    height: calc(100vh - 80px); /* Full height minus navbar height */
+    width: 100%; /* Full width */
+    box-sizing: border-box;
+    overflow: hidden; /* Prevent scrolling */
+    padding: 0; /* Ensure no extra padding creates overflow */
+    position: relative; /* To control layout flow better */
+}
+
+/* Content Styling Inside Main Component */
+.content-body {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+    .content-body h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #007BFF;
+    }
+
+    .content-body p {
+        font-size: 1.2rem;
+        color: #555;
+        margin: 0 auto;
+    }
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .admin-page {
+        flex-direction: column; /* Stack sidebar and content vertically */
+        height: auto; /* Allow height to adjust */
+    }
+
+    .sidebar {
+        width: 100%; /* Sidebar takes full width */
+        position: relative; /* Sidebar no longer fixed */
+        height: auto; /* Adjusts to content height */
+        padding-top: 10px;
+    }
+
+    .main-content {
+        margin-left: 0; /* Remove sidebar offset */
+        width: 100%; /* Full width */
+        height: auto; /* Adjust height to content */
+        padding: 20px;
+    }
+
+    .sidebar-btn {
+        width: 100%; /* Buttons take full width */
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .navbar {
+        font-size: 1.5rem; /* Adjust navbar text size */
+        padding: 12px 0;
+    }
+}
+
+/* Logout Icon Styling */
+.logout-icon {
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    position: absolute; /* Position it relative to the page */
+    top: 12px; /* Distance from the top */
+    right: 77px; /* Distance from the right */
+    font-size: 5rem; /* Increased size */
+    color: #fff; /* White color for the icon */
+    cursor: pointer; /* Make it clickable */
+    background-color: transparent; /* No background */
+    transition: color 0.3s ease;
+}
+
+    .logout-icon:hover {
+        color: #f44336; /* Change color on hover (red) */
+    }
